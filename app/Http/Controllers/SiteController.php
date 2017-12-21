@@ -19,17 +19,34 @@ class SiteController extends Controller
     }
 
     /**
+     * Posts by tags
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function tag($tag)
+    {
+        $posts = Post::with('tags')
+            ->whereHas('tags', function ($query) use($tag){
+                $query->where('name', $tag);
+            })
+            ->paginate(10);
+        return view('index', compact('posts'));
+    }
+
+    /**
      * Show single post
      *
      * @param string $slug
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function post(string $slug )
+    public function post(string $slug)
     {
         $post = Post::whereSlug($slug)->first();
-        if(!$post){
+        if (!$post) {
             abort(404);
         }
-        return view('post',compact('post'));
+        return view('post', compact('post'));
     }
+
+
 }

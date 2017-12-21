@@ -9,14 +9,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-        @section('title')
-            {{ config('app.name', 'Laravel') }}
-        @show
+        @section('title'){{ config('app.name', 'Laravel') }}@show
     </title>
 
-    <meta name="keywords" content="@section('description')Последние новости php, PHP новости, phpnews,php 7, Новости о php, PHP, Symfony, Laravel@show">
+    <meta name="keywords" content="@section('keywords')Последние новости php, PHP новости, phpnews,php 7, Новости о php, PHP, Symfony, Laravel @show">
 
-    <meta name="description" content="@section('description')PHPInfo - это сайт для разработчиков PHP, для обмена полезными заниями и последними новостями. Узнай что-нибудь новое и углуби свои звния в web-разработки@show">
+    <meta name="description" content="@section('description')PHPInfo - это сайт для разработчиков PHP, для обмена полезными заниями и последними новостями. Узнай что-нибудь новое и углуби свои звния в web-разработки @show">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

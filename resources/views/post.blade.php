@@ -1,12 +1,16 @@
 @extends('layouts/site')
 
+@section('title'){{$post->seo_title}}@endsection
+
+@section('keywords'){{$post->meta_keywords}}@endsection
+
+@section('description'){{$post->meta_description}}@endsection
+
 @section('content')
     <div class="row mb-5">
         <div class="col-md-12">
             <p class="h3">
-                <a class="title" href="{{route('post.show', ['slug' => $post->slug])}}">
                     {{$post->title}}
-                </a>
             </p>
             <p class="text-justify">
                {!! $post->body !!}
@@ -14,7 +18,7 @@
             <div class="row">
                 <div class="col-md-8">
                     @foreach($post->tags as $tag)
-                        <a href="#" class="badge badge-dark">{{$tag->name}}</a>
+                        <a href="{{route('post.tag', ['tag' => $tag->name])}}" class="badge badge-dark">{{$tag->name}}</a>
                     @endforeach
                 </div>
                 <div class="col-md-4">

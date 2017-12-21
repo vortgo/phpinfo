@@ -6827,3 +6827,7 @@ body {
 .footer {
     flex: 0 0 auto;
 }
+
+footer div {
+    margin: 20px    ;
+}

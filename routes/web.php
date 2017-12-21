@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/','SiteController@index');
-Route::get('/{slug}',['as' => 'post.show', 'uses' => 'SiteController@post']);
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/','SiteController@index');
+Route::get('/{slug}',['as' => 'post.show', 'uses' => 'SiteController@post']);
+Route::get('/tag/{tag}',['as' => 'post.tag', 'uses' => 'SiteController@tag']);
+
