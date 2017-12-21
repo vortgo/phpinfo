@@ -26,27 +26,35 @@
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col-lg-6 offset-lg-3">
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <h1 class="display-5"><a href="/">phpinfo()</a></h1>
+<div class="wrapper">
+    <div class="page">
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <h1 class="display-5"><a href="/">phpinfo()</a></h1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
-            <div class="content">
-                @yield('content')
-            </div>
         </div>
+    </div>
+    <div class="footer">
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="col-lg-6 offset-lg-3 text-center">
+                    <span class="text-muted">@vortgo - {{date('Y')}}</span>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="col-lg-6 offset-lg-3 text-center">
-            <span class="text-muted">@vortgo - {{date('Y')}}</span>
-        </div>
-    </div>
-</footer>
+
+
 <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
