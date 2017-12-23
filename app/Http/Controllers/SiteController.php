@@ -14,7 +14,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('tags')->paginate(10);
+        $posts = Post::with('tags')->where('status', Post::PUBLISHED)->paginate(10);
         return view('index', compact('posts'));
     }
 
@@ -26,6 +26,7 @@ class SiteController extends Controller
     public function tag($tag)
     {
         $posts = Post::with('tags')
+            ->where('status', Post::PUBLISHED)
             ->whereHas('tags', function ($query) use($tag){
                 $query->where('name', $tag);
             })
