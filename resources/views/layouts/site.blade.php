@@ -31,7 +31,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="row mb-5">
                         <div class="col-md-12">
-                            <h1 class="display-5"><a href="/">phpinfo()</a></h1>
+                            <h1 class="display-5"><a href="/">{{config('app.name')}}</a></h1>
                         </div>
                     </div>
                     <div class="content">
