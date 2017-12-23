@@ -7,7 +7,7 @@
 @section('description'){{$post->meta_description}}@endsection
 
 @section('content')
-    <div class="row mb-5">
+    <div class="row mb-5 block">
         <div class="col-md-12">
             <p class="h3">
                     {{$post->title}}
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="row mb-5">
+    <div class="row mb-5 block">
         <div class="col-md-12">
             <div id="hypercomments_widget"></div>
             <script type="text/javascript">

@@ -13,6 +13,7 @@ a {
 
 a:hover {
     color: grey;
+    text-decoration: none;
 }
 
 .badge-dark {
@@ -53,7 +54,10 @@ pre{
     border-radius: 0;
 }
 
-
+body {
+    height: 100%;
+    background-image: url(/img/bg.jpg);
+}
 html,
 body {
     height: 100%;
@@ -72,4 +76,9 @@ body {
 
 footer div {
     margin: 20px    ;
+}
+
+.block{
+    padding: 10px;
+    background-color: rgba(0,0,0,0.05);
 }

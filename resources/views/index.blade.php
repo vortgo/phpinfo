@@ -19,7 +19,7 @@
         {{--</nav>--}}
     {{--</div>--}}
     @foreach($posts as $post)
-    <div class="row mb-5">
+    <div class="row mb-5 block">
         <div class="col-md-12">
             <p class="h3">
                 <a class="title" href="{{route('post.show', ['slug' => $post->slug])}}">
